@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>xduwu:v</title>
+      <style>
+        /* Variables de color y fuentes */
+        :root {
+            --morado-pastel: #d8c4e3;
+            --rosa-pastel: #f5cbd3;
+            --blanco: #ffffff;
+            --morado-oscuro: #8a6fa5;
+            --rosa-oscuro: #d48a9a;
+            --gris-claro: #f9f9f9;
+        }
+
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: var(--blanco);
+            color: #333;
+            line-height: 1.6;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23f5cbd3' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+
+        /* Encabezado */
+        header {
+            background: linear-gradient(135deg, var(--morado-pastel) 0%, var(--rosa-pastel) 100%);
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 5px dashed var(--morado-oscuro);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+
+        .site-title {
+            font-size: 2.5rem;
+            color: var(--morado-oscuro);
+            text-shadow: 2px 2px 0px var(--rosa-pastel);
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .site-subtitle {
+            font-size: 1.2rem;
+            color: var(--rosa-oscuro);
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Navegación */
+        nav {
+            background-color: var(--morado-oscuro);
+            padding: 1rem;
+            border-bottom: 3px dotted var(--rosa-pastel);
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        .nav-menu li {
+            margin: 0 1.5rem;
+        }
+
+        .nav-menu a {
+            color: var(--blanco);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            background-color: var(--rosa-pastel);
+            color: var(--morado-oscuro);
+            border: 2px dashed var(--blanco);
+        }
+
+        /* Contenido principal */
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        main {
+            flex: 3;
+            padding-right: 2rem;
+        }
+
+        aside {
+            flex: 1;
+            background-color: var(--gris-claro);
+            padding: 1.5rem;
+            border: 3px double var(--morado-pastel);
+            border-radius: 5px;
+        }
+
+        .ensayo-header {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ensayo-header:hover {
+    background-color: rgba(245, 203, 211, 0.1);
+}
+
+.arrow {
+    display: inline-block;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.ensayo-content {
+    padding-top: 1rem;
+    border-top: 1px dashed var(--rosa-pastel);
+    margin-top: 1rem;
+}
+
+        /* Artículos del blog */
+        .post {
+            background-color: var(--blanco);
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border: 2px solid var(--morado-pastel);
+            border-radius: 5px;
+            box-shadow: 5px 5px 0px var(--rosa-pastel);
+            position: relative;
+        }
+
+        .post::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 30px;
+            height: 30px;
+            background-color: var(--rosa-pastel);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .post-title {
+            color: var(--morado-oscuro);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px dotted var(--rosa-pastel);
+            padding-bottom: 0.5rem;
+        }
+
+        .post-meta {
+            color: var(--rosa-oscuro);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .post-meta::before {
+            content: "❀";
+            margin-right: 5px;
+        }
+
+        .post-content {
+            margin-bottom: 1.5rem;
+        }
+
+        .read-more {
+            display: inline-block;
+            background-color: var(--morado-pastel);
+            color: var(--morado-oscuro);
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border: 1px solid var(--morado-oscuro);
+            transition: all 0.3s ease;
+        }
+
+        .read-more:hover {
+            background-color: var(--rosa-pastel);
+            transform: translateY(-2px);
+            box-shadow: 2px 2px 0px var(--morado-oscuro);
+        }
+
+        /* Barra lateral */
+        .sidebar-widget {
+            margin-bottom: 2rem;
+        }
+
+        .widget-title {
+            color: var(--morado-oscuro);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px dashed var(--rosa-pastel);
+        }
+
+        .about-me img {
+            width: 100%;
+            border: 3px solid var(--morado-pastel);
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        .categories ul, .tags ul {
+            list-style: none;
+        }
+
+        .categories li, .tags li {
+            margin-bottom: 0.5rem;
+        }
+
+        .categories a, .tags a {
+            color: var(--rosa-oscuro);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .categories a:hover, .tags a:hover {
+            color: var(--morado-oscuro);
+            text-decoration: underline;
+        }
+
+        .download-btn {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    font-family: inherit;
+}
+
+.download-btn:hover {
+    background-color: var(--rosa-pastel) !important;
+    transform: translateY(-2px);
+    box-shadow: 2px 2px 0px var(--morado-oscuro);
+}
+
+/* Estilo para el mensaje de descarga */
+.download-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--morado-pastel);
+    color: var(--morado-oscuro);
+    padding: 15px 20px;
+    border: 2px dashed var(--morado-oscuro);
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    z-index: 1000;
+    box-shadow: 3px 3px 0px var(--rosa-pastel);
+}
+        /* Pie de página */
+        footer {
+            background: linear-gradient(135deg, var(--rosa-pastel) 0%, var(--morado-pastel) 100%);
+            padding: 2rem;
+            text-align: center;
+            border-top: 5px dashed var(--morado-oscuro);
+            color: var(--morado-oscuro);
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 1rem;
+            color: var(--morado-oscuro);
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.2);
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        /* Elementos decorativos de cerezos */
+        .cherry-blossom {
+            position: fixed;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background-color: var(--rosa-pastel);
+            border-radius: 50% 0 50% 50%;
+            transform: rotate(45deg);
+            opacity: 0.7;
+            z-index: -1;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            main {
+                padding-right: 0;
+                margin-bottom: 2rem;
+            }
+            
+            .nav-menu {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav-menu li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cherry-blossom" style="left: 5%; animation-duration: 15s;"></div>
+    <div class="cherry-blossom" style="left: 15%; animation-duration: 20s;"></div>
+    <div class="cherry-blossom" style="left: 25%; animation-duration: 18s;"></div>
+    <div class="cherry-blossom" style="left: 35%; animation-duration: 22s;"></div>
+    <div class="cherry-blossom" style="left: 45%; animation-duration: 17s;"></div>
+    <div class="cherry-blossom" style="left: 55%; animation-duration: 19s;"></div>
+    <div class="cherry-blossom" style="left: 65%; animation-duration: 16s;"></div>
+    <div class="cherry-blossom" style="left: 75%; animation-duration: 21s;"></div>
+    <div class="cherry-blossom" style="left: 85%; animation-duration: 14s;"></div>
+    <div class="cherry-blossom" style="left: 95%; animation-duration: 23s;"></div>
+
+    <header>
+        <h1 class="site-title">Hilos de una hipofísica</h1>
+        <p class="site-subtitle">Sigler, T.</p>
+    </header>
+
+    <nav>
+        <ul class="nav-menu">
+            <li><a href="#" class="nav-link" data-section="ideas">Ideas</a></li>
+            <li><a href="#" class="nav-link active" data-section="ensayos">Ensayos</a></li>
+            <li><a href="#" class="nav-link" data-section="trabajos">Trabajos Prácticos</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <main>
+            <!-- Sección Ideas (oculta por defecto) -->
+            <section id="ideas" class="content-section" style="display: none;">
+                <article class="post">
+                    <h2 class="post-title">Ideas</h2>
+                    <div class="post-meta">Última actualización: 25 de noviembre, 2025</div>
+                    <div class="post-content">
+                        <p>Esta sección esta en desarrollo
+                        </p>
+                    </div>
+                </article>
+            </section>
+
+    <section id="ensayos" class="content-section">
+    <article class="post">
+        <div class="ensayo-header">
+            <h2 class="post-title">
+                <span class="arrow">▶</span>
+                El objeto sensible entre el ser y el no-ser
+            </h2>
+            <div class="post-meta">Publicado el 11 de noviembre, 2025</div>
+        </div>
+        <div class="ensayo-content" style="display: none;">
+            <div class="post-content">
+                 <h3>Introducción</h3>
+                 <p>El presente trabajo pretende abordar los problemas de orden ontológico planteados en el diálogo platónico Sofista, en vistas a analizar el modo por el que este sistema esboza una teoría de la sensibilidad. A razón de esto último es que se realizará aquí una mirada proléptica respecto del diálogo Ión, así como del libro décimo de República.</p> <p>En sentido metodológico, el análisis se centrará en la reconstrucción de los conceptos desplegados por Platón en el Sofista, atendiendo a su articulación con el problema del ser (y, en consecuencia, del no ser) y del conocimiento de este. La lectura se realizará en clave proléptica, tomando como horizonte pasajes del Ion y de República X que permiten anticipar y reforzar la problemática de la mimesis, la apariencia, la técnica y la posibilidad de conocer y practicar estos conceptos. El objetivo aquí es mostrar cómo, a través de la figura del sofista, Platon ensaya una teoría de la sensibilidad que oscila desde la producción de fantasmas y la simulación de saber hasta el conocimiento del ser por medio de la dialéctica.</p>
+                 <h3>Sobre el problema del ser y lo sensible en Platón</h3>
+                 <p>Esta problemática, dentro de la dialéctica platónica, parte de la presentación de la dicotomía entre la doxa y la episteme o, como se presenta en el diálogo Ion, de la distinción entre un saber técnico y un saber divino, de la distinción entre una techne y un enthusiasmos:</p>
+                 <p>Porque no es una técnica lo que hay en ti al hablar bien sobre Homero [...] una fuerza divina es la que te mueve, parecida a la que hay en la piedra magnética que atrae anillos de hierro y transmite su fuerza [...] así también la Musa crea inspirados, y por medio de ellos encadena a otros en este entusiasmo [...] los poetas épicos no hablan en virtud de una técnica, sino porque están endiosados y posesos. (Ion, 533b – 533e)</p>
+                 <p>De este modo es como en el diálogo del Ion se puede anticipar lo que en Sofista será la distinción entre los eikones y los phantasmatas. El poeta no posee técnica en el sentido platónico del término porque sus producciones no nacen de su intelecto ni de sus aspiraciones por transformar los afectos o la materia, sino que son la transmisión de la divinidad interviniendo en el accionar de los poetas. Para Platón la sensibilidad es susceptible de ser abordada por una técnica en la medida que esta es el resultado de una correspondencia entre el objeto que hiere los órganos sensibles con la realidad. El poeta, el político y el sofista no van a ser portadores de una técnica de la sensibilidad que busque esta correspondencia, sino que van a ser imitadores (y, desde una postura neoplatónica, degradadores) de lo real:</p>
+                 <p>El imitador [...] no tendrá conocimiento ni opinión recta de las cosas que imita, en cuanto a su bondad o maldad [...] parece que estamos razonablemente de acuerdo en que el imitador no conoce nada digno de mención en lo tocante a aquello que imita, sino que la imitación es como un juego que no debe ser tomado en serio [...] ¿no es esta imitación algo situado en el tercer lugar a partir de la verdad? [...] la pintura y en general todo arte mimético realiza su obra lejos de la verdad, y se asocia con aquella parte de nosotros que está lejos de la sabiduría y que es su amiga sin apuntar a nada sano ni verdadero. (República, 602a – 603b)</p>
+                 <p>Por medio de este pasaje, el filósofo introduce un nuevo elemento de consideración dentro de la técnica de lo sensible: en la medida que se sucede la correspondencia, puede evaluarse a la técnica que efectúa este procedimiento como más próxima a la verdad; caso contrario esta se encontrara más distante de la misma. Por tanto, el problema de lo sensible no solo está relacionado con el ser del objeto que hiere los sentidos, sino con la correspondencia entre la técnica que habilita esta percepción con la realidad, vale decir, con el conocimiento del objeto que hiere los sentidos.</p>
+                 <p>A partir de estos pasajes es como en la ontología platónica se describe al objeto de la sensibilidad como un inmanente a la realidad (en la medida que participa de las ideas) que, segun la tecnica que se use, puede ser percibido con menor o mayor aproximación a su forma más pura. En este sentido, la búsqueda de una técnica para la captación y transmisión del saber de las cosas sensibles es de crucial importancia para asegurar la mayor proximidad a la forma misma del objeto:</p> <p>Quien no posee [...] una técnica no está capacitado para conocer bien lo que se dice o se hace [...] en los versos que has recitado, ¿sabrá mejor si Homero habla con exactitud o no, tú o un auriga? [...] cuando Homero dice que Hecamede [...] da una mixtura a Macaón herido [...] ¿a quién pertenece aquí dictaminar si Homero habla con exactitud, al médico o al rapsodo? (Ion, 538a – 538c)</p>
+                 <p>Si los poetas, en tanto que imitadores, no poseen técnica, sino que imitan el saber técnico, el conocimiento de lo sensible no debiera corresponder a imitadores, sino a los mismos artesanos que producen y estudian la constitución del objeto sensible para llevarlo a su máxima realización. No obstante, ello genera nuevos inconvenientes:</p> <p>El fabricante de camas [...] no hace la Idea —aquello por lo cual decimos que la cama es cama— sino una cama particular [...] no fabrica lo real sino algo semejante a lo real más no es real. [...] No son tres las camas que se nos aparecen, de una de las cuales decimos que existe en la naturaleza y que ha sido fabricada por Dios [...] otra, la que hace el carpintero [...] y la tercera, la que hace el pintor. (República, 597a – 598b)</p>
+                 <p>Este pasaje muestra como la relación entre la técnica de la sensibilidad y el ser del objeto de la sensibilidad tienen una distancia insalvable, pues el ser del objeto sensible no se encuentra en el plano de los objetos sensibles, sino que resulta una forma que el artesano contempla en apariencia bajo la pretensión de que su producción sea lo más próxima a esa realidad.</p>
+                 <p>Acostumbrábamos a postular una Idea única para cada multiplicidad de cosas a las que damos el mismo nombre [...] hay muchas camas y mesas, pero Ideas de estos muebles hay dos: una de la cama y otra de la mesa [...] ningún artesano podría fabricar la Idea en sí. (República, 596a – 596b)</p>
+                 <p>Por tanto, en la medida que el artesano, vale decir, el técnico, no es fabricante de la realidad, sino que sólo la descubre y contempla, haría falta de un mediador entre el técnico y la forma del objeto de sensibilidad que habilite a este primero del conocimiento más próximo a la segunda. Este mediador será, según describe Platón por medio del Sofista, el filósofo.</p>
+                 <h3>Sobre la ontología del Sofista</h3>
+                 <p>En tanto que el objeto de sensibilidad es el resultado de la búsqueda de su semejanza con la forma de la que participa, Platon hace una distinción entre aquellos objetos que efectúan esta semejanza y los que solo la simulan:</p>
+                 <p>Se distingue en [...] [la técnica imitativa], por una parte, una figurativa, que existe cuando alguien, teniendo en cuenta las proporciones del modelo, produce una imitación semejante al original [...] En cambio, lo que sólo aparenta parecerse, sin parecerse realmente, debe llamarse apariencia [...] Para esta técnica [que no produce imágenes proporcionales, sino apariencias], sería correcto el nombre de técnica simulativa [...] He aquí, entonces, las dos formas de [...] [la producción de imágenes]: la figurativa y la simulativa. (Sofista, 235d – 236c)</p>
+                 <p>A este respecto, la técnica de los sofistas y de los poetas no corresponde a una técnica figurativa, sino solo a una técnica simulativa. Por medio de este pasaje Platón inaugura dos nuevos conceptos que pueden salvar la distancia entre las imágenes phantasmatas y las imágenes eikones. No obstante, Platon no descarta el cambio como uno de los géneros supremos de lo que participan las cosas que son, a este respecto queda abierta la pregunta: ¿cómo es posible que las simulaciones se mantengan como simulación si están sometidas al cambio? ¿no tendrían que, en algún punto de su participación del cambio, volverse próximas al ser, de modo que la simulación sea en mayor grado que las figuraciones?</p>
+                 <p>La semejanza y la desemejanza serán los modos por medio de los cuales Platón va a salvar la distancia que hay entre los objetos sensibles y las formas de las que estos participan sin que su jerarquía ontológica se vea afectada por el cambio al que están sometidos los objetos sensibles:</p>
+                 <p>¿No es acaso evidente que el cambio es realmente algo que no es, aunque también sea, pues participa del ser? [...] Es, entonces, necesario que exista el no‑ser en lo que respecta al cambio, y también en el caso de todos los géneros. Pues, en cada género, la naturaleza de lo diferente, al hacerlo diferente del ser, lo convierte en algo que no es, y, según este aspecto, es correcto decir que todos ellos son algo que no es, pero, al mismo tiempo, en tanto participan del ser, existen y son algo que es. [...] Respecto de cada forma, entonces, hay mucho de ser, pero también una cantidad infinita de no‑ser. (Sofista, 256d–257a)</p>
+                 <p>A razón de ello, el filósofo se ve en la obligación no solo de reconocer que el no-ser se encuentra conformando aquellas formas que participan del ser, sino que además debe plantear en el ser un elemento que le permita resolver la inmutabilidad de los caminos que habia propuesto Parmenides, puesto que ahora da cuenta de que el camino de las cosas que no son no solo no es intransitable, sino que además compone mayor parte de las formas que el propio camino del ser.</p>
+                 <p>De este modo es como Platón va a introducir en su jerarquía ontológica la posibilidad de que el ser de los objetos sensibles se relacione con otras formas a efectos de preservarse dentro del género de las cosas que son. Por tanto, la sensibilidad que en anteriores diálogos era el resultado de la afectación por el objeto sensible que busca asemejarse a la forma, ahora es la captación de una relacionalidad entre las formas, de suerte que los objetos sensibles no deben asemejarse a la forma sino a la relacionalidad que hay entre esta con las otras formas. En palabras del filósofo:</p>
+                 <p>Digo que existe realmente todo aquello que posee una cierta potencia, ya sea de actuar sobre cualquier otra cosa natural, ya sea de padecer, aunque sea en grado mínimo y a causa de algo infinitamente débil, incluso si esto ocurre una sola vez [...] Sostengo entonces esta fórmula para definir a las cosas que son: no son otra cosa que potencia. [...] Debe aceptarse que tanto lo que cambia como el cambio existen. [...] Pues si las cosas estuvieran en reposo, no habría ningún tipo de pensamiento respecto de nada en absoluto. [...] Pero si, por otra parte, aceptamos que todo se traslada y cambia, eso mismo, según este argumento, será suprimido del ser [...] Según parece, entonces, y sobre la base de esto, es necesario que el filósofo [admita] [...] que el ser y el todo, simultáneamente, están en reposo y cambian. (Sofista, 247e – 249a)</p>
+                 <p>Por tanto, una técnica de los objetos de la sensibilidad no debe ser ajena a esta dynamis, las implicaciones de fondo epistémico en esta nueva concepción ponen al sujeto de la sensibilidad no como mero receptor pasivo de las imágenes de las formas, sino como sujeto susceptible de adquirir la capacidad de distinguir los conocimientos verdaderos de las simulaciones. Platón resuelve el problema por el que la mente es capaz de distinguir la falsedad de las simulaciones a pesar de que estas se encuentren en el mismo plano de realidad sensible que las figuraciones. En este marco, las producciones del sofista son en tanto que participan del género del ser, más no son en tanto que no se asemejan a la correspondencia que hay entre la percepción del objeto sensible y la relacionalidad de formas a las que participa.</p>
+                 <h3>A modo de conclusión</h3>
+                 <p>En suma, la ontología del Sofista permite comprender que el objeto sensible no es mera copia degradada de la Idea, sino un ente que participa de la relacionalidad de las formas en tanto potencia. La distinción entre imágenes figurativas y simulativas abre el problema de la apariencia y la falsedad, que sólo se resuelve al reconocer que el ser mismo incluye reposo y movimiento, ser y no ser, en una dinámica de comunicación. De este modo, Platón desplaza la sensibilidad desde la pasiva recepción de imágenes hacia la captación activa de relaciones, y confiere al filósofo la tarea de discernir entre conocimiento verdadero y simulación sofística. La conclusión es clara: la sensibilidad, lejos de ser un obstáculo, se convierte en el ámbito donde se juega la posibilidad misma de la verdad.</p>
+                 <h3>Bibliografía</h3>
+                 <p>Platón. (1997). República (trad. J. Calonge Ruiz). Madrid: Gredos.</p>
+                 <p>Platón. (1992). Ion (trad. J. Calonge Ruiz). Madrid: Gredos.</p>
+                 <p>Platón. (1992). Sofista (trad. N. L. Cordero). Madrid: Gredos.</p>
+            </div>
+        </div>
+    </article>
+    </section>
+
+            <!-- Sección Trabajos Prácticos (oculta por defecto) -->
+<section id="trabajos" class="content-section" style="display: none;">
+    <div class="trabajos-container">
+        <aside class="trabajos-sidebar">
+            <h3 class="widget-title">Materias</h3>
+            <ul class="materias-menu">
+                <li><a href="#" class="materia-link active" data-materia="ihs">Introducción a la Historia de las Sociedades</a></li>
+                <li><a href="#" class="materia-link" data-materia="lite">Introducción a la Literatura</a></li>
+                <li><a href="#" class="materia-link" data-materia="f-antigua">Historia de la Filosofía Antigua</a></li>
+            </ul>
+        </aside> <br>
+
+        <div class="trabajos-content">
+            <!-- Contenido IHS -->
+            <div id="ihs" class="materia-content">
+                <article class="post">
+                    <h2 class="post-title">Trabajo Practico Integrador N°3</h2>
+                    <div class="post-meta">Entrega: Agosto de 2025 | PDF, 151 KB</div>
+                    <div class="post-content">
+                        <p>TPI de Revolución Francesa</p>
+                    </div>
+                    <a href="trabajos practicos/ihs/Trabajo Practico Integrador Nº3.pdf"
+                       class="read-more download-btn" download="TPI N°3 IHS.pdf" target="_blank">
+                        Descargar Archivo
+                    </a>
+                </article>
+
+                <article class="post">
+                    <h2 class="post-title">Trabajo Practico Integrador N°5</h2>
+                    <div class="post-meta">Entrega: Octubre de 2025 | PDF, 370 KB</div>
+                    <div class="post-content">
+                        <p>TPI de Segunda Revolución Industrial e Imperialismo</p>
+                    </div>
+                    <a href="trabajos practicos/ihs/Trabajo Practico Integrador Nº5.pdf"
+                       class="read-more download-btn" download="TPI N°5 IHS.pdf" target="_blank">
+                        Descargar Archivo
+                    </a>
+                </article>
+
+                <article class="post">
+                    <h2 class="post-title">Trabajo Practico Integrador N°6</h2>
+                    <div class="post-meta">Entrega: Octubre de 2025 | PDF, 324 KB</div>
+                    <div class="post-content">
+                        <p>TPI de Revolución Rusa</p>
+                    </div>
+                    <a href="trabajos practicos/ihs/Trabajo Practico Integrador Nº6.pdf"
+                       class="read-more download-btn" download="TPI N°6 IHS.pdf" target="_blank">
+                        Descargar Archivo
+                    </a>
+                </article>
+
+                <article class="post">
+                    <h2 class="post-title">Trabajo Practico Integrador N°7</h2>
+                    <div class="post-meta">Entrega: Noviembre de 2025 | PDF, 276 KB</div>
+                    <div class="post-content">
+                        <p>TPI de Nacionalismos y Fascismos</p>
+                    </div>
+                    <a href="trabajos practicos/ihs/Trabajo Practico Integrador Nº7.pdf"
+                       class="read-more download-btn" download="TPI N°7 IHS.pdf" target="_blank">
+                        Descargar Archivo
+                    </a>
+                </article>
+            </div>
+
+            <!-- Contenido lite -->
+            <div id="lite" class="materia-content" style="display: none;">
+                <article class="post">
+                    <h2 class="post-title">Trabajo Practico Integrador N° 1</h2>
+                    <div class="post-meta">Entrega: Febrero de 2025 | PDF, 160 KB</div>
+                    <div class="post-content">
+                        <p>TPI de Mundo Clasico</p>
+                    </div>
+                    <a href="trabajos practicos/lite/Trabajo Practico Integrador N° 1.pdf"
+                       class="read-more download-btn" download="TPI N°1 lite.pdf" target="_blank">
+                        Descargar Archivo
+                    </a>
+                </article>
+
+                <article class="post">
+                    <h2 class="post-title">Trabajo Practico Integrador N° 2</h2>
+                    <div class="post-meta">Entrega: 18 de junio, 2025 | PDF, 529 KB</div>
+                    <div class="post-content">
+                        <p>TPI de Edad Media</p>
+                    </div>
+                    <a href="trabajos practicos/lite/Trabajo Practico Integrador N° 2.pdf"
+                       class="read-more download-btn" download="TPI N°2 lite" target="_blank">
+                        Descargar Archivo
+                    </a>
+                </article>
+
+                <article class="post">
+                    <h2 class="post-title">Recuperatorio de Trabajo Practico Integrador N° 3</h2>
+                    <div class="post-meta">Entrega: 1 de octubre, 2025 | PDF, 548 KB</div>
+                    <div class="post-content">
+                        <p>TPI de Barroco y Neoclasicismo</p>
+                    </div>
+                    <a href="trabajos practicos/lite/Recuperatorio de Trabajo Practico Integrador N° 3.pdf"
+                       class="read-more download-btn" download="RTPI N°3 lite" target="_blank">
+                        Descargar Archivo
+                    </a>
+                </article>
+            </div>
+
+            <!-- Contenido f-antigua-->
+            <div id="f-antigua" class="materia-content" style="display: none;">
+                <article class="post">
+                    <h2 class="post-title">Trabajo Practico Integrador N° 1</h2>
+                    <div class="post-meta">Entrega: 1 de octubre, 2025 | PDF, 208 KB</div>
+                    <div class="post-content">
+                        <p>TPI de los presocraticos</p>
+                    </div>
+                    <a href="trabajos practicos/antigua/Trabajo Practico Integrador N° 1.pdf"
+                       class="read-more download-btn" download="TPI N°1 antigua" target="_blank">
+                        Descargar Archivo
+                    </a>
+                </article>
+
+                <article class="post">
+                    <h2 class="post-title">Trabajo Practico Integrador N° 2</h2>
+                    <div class="post-meta">Entrega: 1 de octubre, 2025 | PDF, 234 KB</div>
+                    <div class="post-content">
+                        <p>TPI de Socrates y Platon</p>
+                    </div>
+                    <a href="trabajos practicos/antigua/Trabajo Practico Integrador N° 2.pdf"
+                       class="read-more download-btn" download="TPI N°2 antigua" target="_blank">
+                        Descargar Archivo
+                    </a>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tam.er31415@gmail.com">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#f7a8c4" xmlns="http://www.w3.org/2000/svg" role="img">
+                <path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm0 2v.3l9 6.2 9-6.2V7H3zm0 2.7V17h18V9.7l-8.36 5.76a2 2 0 0 1-2.28 0L3 9.7z"/>
+                </svg>
+                </a>
+
+                <a href="#">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="#f7a8c4" xmlns="http://www.w3.org/2000/svg" role="img">
+                <path d="M9 3a3 3 0 0 0-3 3c0 .23.03.45.08.66A3.5 3.5 0 0 0 3 10a3.5 3.5 0 0 0 1.5 2.88A3 3 0 0 0 7 17a3 3 0 0 0 3 3h1v-3.5c0-.83-.67-1.5-1.5-1.5H9a2 2 0 0 1-2-2c0-.4.12-.77.33-1.08l.52-.78a1.5 1.5 0 0 0-.85-2.3L6.5 8A2.5 2.5 0 0 1 9 5.5h.5A2.5 2.5 0 0 1 12 3H9zm6 0a3 3 0 0 1 3 3c0 .23-.03.45-.08.66A3.5 3.5 0 0 1 21 10a3.5 3.5 0 0 1-1.5 2.88A3 3 0 0 1 17 17a3 3 0 0 1-3 3h-1v-3.5c0-.83.67-1.5 1.5-1.5H15a2 2 0 0 0 2-2c0-.4-.12-.77-.33-1.08l-.52-.78a1.5 1.5 0 0 1 .85-2.3l.5-.36A2.5 2.5 0 0 0 15 5.5h-.5A2.5 2.5 0 0 0 12 3h3z"/>
+                </svg>
+                </a>
+            </div>
+            <p class="copyright">© 2025 Blog sin título. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navegación principal (Ideas, Ensayos, Trabajos Prácticos)
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const contentSections = document.querySelectorAll('.content-section');
+            
+            // Mostrar solo la sección activa
+            function showSection(sectionId) {
+                // Ocultar todas las secciones
+                contentSections.forEach(section => {
+                    section.style.display = 'none';
+                });
+                
+                // Mostrar la sección seleccionada
+                const activeSection = document.getElementById(sectionId);
+                if (activeSection) {
+                    activeSection.style.display = 'block';
+                }
+                
+                // Actualizar clases activas en navegación
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('data-section') === sectionId) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+            
+            // Event listeners para navegación principal
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const sectionId = this.getAttribute('data-section');
+                    showSection(sectionId);
+                });
+            });
+            
+            // Navegación lateral de materias (solo para Trabajos Prácticos)
+            const materiaLinks = document.querySelectorAll('.materia-link');
+            const materiaContents = document.querySelectorAll('.materia-content');
+            
+            function showMateria(materiaId) {
+                // Ocultar todos los contenidos de materias
+                materiaContents.forEach(content => {
+                    content.style.display = 'none';
+                });
+                
+                // Mostrar la materia seleccionada
+                const activeMateria = document.getElementById(materiaId);
+                if (activeMateria) {
+                    activeMateria.style.display = 'block';
+                }
+                
+                // Actualizar clases activas en menú lateral
+                materiaLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('data-materia') === materiaId) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+            
+            // Event listeners para navegación de materias
+            materiaLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const materiaId = this.getAttribute('data-materia');
+                    showMateria(materiaId);
+                });
+            });
+            
+            // Mostrar Ensayos por defecto al cargar la página
+            showSection('ensayos');
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+        const ensayoHeaders = document.querySelectorAll('.ensayo-header');
+        
+        ensayoHeaders.forEach(header => {
+            header.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                const arrow = this.querySelector('.arrow');
+                
+                // Alternar visibilidad
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                    arrow.textContent = '▶';
+                } else {
+                    content.style.display = 'block';
+                    arrow.textContent = '▼';
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>
